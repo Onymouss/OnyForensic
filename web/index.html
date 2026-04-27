@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OnyForensic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <!-- Sidebar -->
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <rect width="28" height="28" rx="6" fill="#e63950"/>
+          <path d="M7 14h14M14 7l7 7-7 7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="logo-text">OnyForensic</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">TOOLKIT</div>
+      <button class="nav-item active" data-tab="dashboard">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        Dashboard
+      </button>
+      <button class="nav-item" data-tab="nirsoft">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        NirSoft Tools
+      </button>
+      <button class="nav-item" data-tab="espouken">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Espouken
+      </button>
+      <button class="nav-item" data-tab="zimmerman">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10,9 9,9 8,9"/></svg>
+        Eric Zimmerman
+      </button>
+      <button class="nav-item" data-tab="echo">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="11,5 6,12 11,12 9,19 18,10 13,10"/></svg>
+        Echo Tools
+      </button>
+      <button class="nav-item" data-tab="standalone">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        Standalone
+      </button>
+      <button class="nav-item" data-tab="redlotus">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        RedLotus
+      </button>
+      <button class="nav-item" data-tab="filerecovery">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 15v4a2 2 0 002 2h14a2 2 0 002-2v-4M12 3v12m-4-4l4 4 4-4"/></svg>
+        File Recovery
+      </button>
+
+      <div class="nav-section-label" style="margin-top:16px">ANALYSIS</div>
+      <button class="nav-item" data-tab="fileanalysis">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10,9 9,9 8,9"/></svg>
+        File Analysis
+      </button>
+      <button class="nav-item" data-tab="powershell">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="4,17 10,11 4,5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+        PowerShell
+      </button>
+      <button class="nav-item" data-tab="usb">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v8M8 6l4-4 4 4M8 18a4 4 0 108 0 4 4 0 00-8 0M12 14v4"/></svg>
+        USB Registry
+      </button>
+    </nav>
+
+    <div class="sidebar-footer">
+      <button class="open-folder-btn" onclick="openCheckerFolder()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+        Open Checker Folder
+      </button>
+      <div class="version-tag">OnyForensic v1.0</div>
+    </div>
+  </aside>
+
+  <!-- Main content -->
+  <main id="main">
+    <!-- Status bar -->
+    <div id="statusbar">
+      <div class="status-left">
+        <span id="status-dot" class="dot idle"></span>
+        <span id="status-text">Ready</span>
+      </div>
+      <div class="status-right">
+        <span id="dl-count" class="badge-count hidden">0 downloading</span>
+      </div>
+    </div>
+
+    <!-- Dashboard tab -->
+    <div id="tab-dashboard" class="tab-content active">
+      <div class="page-header">
+        <h1>Dashboard</h1>
+        <p class="page-sub">Overview of all tools and quick actions</p>
+      </div>
+      <div class="stats-row">
+        <div class="stat-card">
+          <div class="stat-num" id="stat-total">62</div>
+          <div class="stat-label">Total Tools</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" id="stat-downloaded">0</div>
+          <div class="stat-label">Downloaded</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">9</div>
+          <div class="stat-label">Categories</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" id="stat-ps">11</div>
+          <div class="stat-label">PS Scripts</div>
+        </div>
+      </div>
+
+      <div class="dashboard-grid">
+        <div class="dash-category-card" onclick="switchTab('nirsoft')">
+          <div class="dcc-icon nirsoft-color">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          </div>
+          <div class="dcc-info">
+            <div class="dcc-name">NirSoft Tools</div>
+            <div class="dcc-count">9 tools</div>
+          </div>
+          <div class="dcc-arrow">→</div>
+        </div>
+        <div class="dash-category-card" onclick="switchTab('espouken')">
+          <div class="dcc-icon detect-color">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="dcc-info">
+            <div class="dcc-name">Espouken</div>
+            <div class="dcc-count">4 tools</div>
+          </div>
+          <div class="dcc-arrow">→</div>
+        </div>
+        <div class="dash-category-card" onclick="switchTab('zimmerman')">
+          <div class="dcc-icon zimm-color">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
+          </div>
+          <div class="dcc-info">
+            <div class="dcc-name">Eric Zimmerman</div>
+            <div class="dcc-count">7 tools</div>
+          </div>
+          <div class="dcc-arrow">→</div>
+        </div>
+        <div class="dash-category-card" onclick="switchTab('echo')">
+          <div class="dcc-icon echo-color">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="11,5 6,12 11,12 9,19 18,10 13,10"/></svg>
+          </div>
+          <div class="dcc-info">
+            <div class="dcc-name">Echo Tools</div>
+            <div class="dcc-count">5 tools</div>
+          </div>
+          <div class="dcc-arrow">→</div>
+        </div>
+        <div class="dash-category-card" onclick="switchTab('standalone')">
+          <div class="dcc-icon standalone-color">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div class="dcc-info">
+            <div class="dcc-name">Standalone</div>
+            <div class="dcc-count">11 tools</div>
+          </div>
+          <div class="dcc-arrow">→</div>
+        </div>
+        <div class="dash-category-card" onclick="switchTab('redlotus')">
+          <div class="dcc-icon redlotus-color">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <div class="dcc-info">
+            <div class="dcc-name">RedLotus</div>
+            <div class="dcc-count">4 tools</div>
+          </div>
+          <div class="dcc-arrow">→</div>
+        </div>
+        <div class="dash-category-card" onclick="switchTab('filerecovery')">
+          <div class="dcc-icon recovery-color">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 15v4a2 2 0 002 2h14a2 2 0 002-2v-4M12 3v12m-4-4l4 4 4-4"/></svg>
+          </div>
+          <div class="dcc-info">
+            <div class="dcc-name">File Recovery</div>
+            <div class="dcc-count">5 tools</div>
+          </div>
+          <div class="dcc-arrow">→</div>
+        </div>
+        <div class="dash-category-card" onclick="switchTab('fileanalysis')">
+          <div class="dcc-icon analysis-color">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div class="dcc-info">
+            <div class="dcc-name">File Analysis</div>
+            <div class="dcc-count">4 tools</div>
+          </div>
+          <div class="dcc-arrow">→</div>
+        </div>
+        <div class="dash-category-card" onclick="switchTab('powershell')">
+          <div class="dcc-icon ps-color">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="4,17 10,11 4,5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+          </div>
+          <div class="dcc-info">
+            <div class="dcc-name">PowerShell</div>
+            <div class="dcc-count">11 scripts</div>
+          </div>
+          <div class="dcc-arrow">→</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tool tabs -->
+    <div id="tab-nirsoft" class="tab-content tool-tab" data-category="nirsoft"></div>
+    <div id="tab-espouken" class="tab-content tool-tab" data-category="espouken"></div>
+    <div id="tab-zimmerman" class="tab-content tool-tab" data-category="zimmerman"></div>
+    <div id="tab-echo" class="tab-content tool-tab" data-category="echo"></div>
+    <div id="tab-standalone" class="tab-content tool-tab" data-category="standalone"></div>
+    <div id="tab-redlotus" class="tab-content tool-tab" data-category="redlotus"></div>
+    <div id="tab-filerecovery" class="tab-content tool-tab" data-category="filerecovery"></div>
+    <div id="tab-fileanalysis" class="tab-content tool-tab" data-category="fileanalysis"></div>
+
+    <!-- PowerShell tab -->
+    <div id="tab-powershell" class="tab-content">
+      <div class="page-header">
+        <h1>PowerShell Scripts</h1>
+        <p class="page-sub">Run forensic scripts with live output</p>
+      </div>
+      <div id="ps-grid" class="ps-grid"></div>
+    </div>
+
+    <!-- USB Registry tab -->
+    <div id="tab-usb" class="tab-content">
+      <div class="page-header">
+        <h1>USB Registry Scanner</h1>
+        <p class="page-sub">Check 4 registry hives for USB device history</p>
+      </div>
+      <div class="usb-action-row">
+        <button class="btn-primary" onclick="runUSBScan()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          Run Full Scan
+        </button>
+        <button class="btn-ghost" onclick="clearUSBResults()">Clear</button>
+      </div>
+      <div id="usb-results" class="usb-results"></div>
+    </div>
+  </main>
+
+  <!-- Download progress overlay -->
+  <div id="dl-toast-container"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
